@@ -40,37 +40,37 @@
   ]]></command>
   <inputs>
 		<param name="input_sbml" type="data" format="sbml" label="Input file" />
-		<param name="gem_sbml" type="data" format="sbml" label="Input GEM SBML model" />
+		<param name="gem_sbml"   type="data" format="sbml" label="Input GEM SBML model" />
     <conditional name="input_sim_type">
-      <param name="sim_type" type="select" label="Constraint based simulation type">
+      <param name="sim_type"     type="select" label="Constraint based simulation type">
         <option value="fraction" type="text" selected="true">Fraction of Reaction</option>
-        <option value="fba" type="text">FBA</option>
-        <option value="pfba" type="text">Parsimonious FBA</option>
+        <option value="fba"      type="text">FBA</option>
+        <option value="pfba"     type="text">Parsimonious FBA</option>
       </param>
 			<when value="fraction">
-				<param name="fraction_of" type="float" value="0.75" label="Fraction of the source reaction" />
-				<param name="target_reaction" type="text" value="RP1_sink" label="Target reaction" />
-				<param name="source_coefficient" type="float" value="1.0" label="Target coefficient" />
-				<param name="source_reaction" type="text" value="biomass" label="Source reaction" />
-				<param name="target_coefficient" type="float" value="1.0" label="Source coefficient" />
+				<param name="fraction_of"        type="float" value="0.75"     label="Fraction of the source reaction" />
+				<param name="target_reaction"    type="text"  value="RP1_sink" label="Target reaction" />
+				<param name="source_coefficient" type="float" value="1.0" l    abel="Target coefficient" />
+				<param name="source_reaction"    type="text"  value="biomass"  label="Source reaction" />
+				<param name="target_coefficient" type="float" value="1.0"      label="Source coefficient" />
 			</when>
 			<when value="pfba">
-				<param name="fraction_of" type="float" value="0.95" label="Fraction of optimal" />
-				<param name="target_reaction" type="text" value="RP1_sink" label="Target reaction" />
-				<param name="target_coefficient" type="float" value="1.0" label="Target coefficient" />
+				<param name="fraction_of"        type="float" value="0.95"     label="Fraction of optimal" />
+				<param name="target_reaction"    type="text"  value="RP1_sink" label="Target reaction" />
+				<param name="target_coefficient" type="float" value="1.0"      label="Target coefficient" />
 			</when>
 			<when value="fba">
-				<param name="target_reaction" type="text" value="RP1_sink" label="Target reaction" />
-				<param name="target_coefficient" type="float" value="1.0" label="Target coefficient" />
+				<param name="target_reaction"    type="text"  value="RP1_sink" label="Target reaction" />
+				<param name="target_coefficient" type="float" value="1.0"      label="Target coefficient" />
 			</when>
     </conditional>
 		<section name="adv" title="Advanced Options" expanded="false">
-			<param name="pathway_id" type="text" value="rp_pathway" label="Name of the heterologous pathway" />
-			<param name="objective_id" type="text" value="None" label="Overwrite default given objective ID" />
-			<param name="is_max" type="boolean" truevalue="True" falsevalue="False" checked="true" label="Maximise the objective?" />
-			<param name="dont_merge" type="boolean" display="checkboxes" truevalue="True" falsevalue="False" checked="true" label="Don't output the merged model?" />
-			<param name="compartment_id" type="text" value="MNXC3" label="SBML compartment ID" />
-			<param name="log_level" type="select" label="Log level">
+			<param name="pathway_id"     type="text"    label="Name of the heterologous pathway"     value="rp_pathway" />
+			<param name="objective_id"   type="text"    label="Overwrite default given objective ID" value="None" />
+			<param name="is_max"         type="boolean" label="Maximise the objective?"              truevalue="True" falsevalue="False" checked="true" />
+			<param name="dont_merge"     type="boolean" label="Don't output the merged model?"       truevalue="True" falsevalue="False" checked="true" display="checkboxes" />
+			<param name="compartment_id" type="text"    label="SBML compartment ID"                  value="MNXC3" />
+			<param name="log_level"      type="select"  label="Log level">
         <option value="debug"    type="text"                >debug</option>
         <option value="info"     type="text"                >info</option>
 				<option value="warning"  type="text"                >warning</option>
