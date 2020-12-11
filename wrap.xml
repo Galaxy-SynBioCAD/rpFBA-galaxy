@@ -18,7 +18,9 @@
 				--target_reaction '$input_sim_type.target_reaction'
 				--target_coefficient '$input_sim_type.target_coefficient'
 				--sim_type '$input_sim_type.sim_type'
-				--is_max '$adv.is_max'
+			#if str($adv.is_max) == "true":
+				--is_max
+			#end if
 				--log '$adv.log_level'
 			#if str($input_sim_type.sim_type)=="fraction"
 				--source_coefficient '$input_sim_type.source_coefficient'
@@ -78,11 +80,7 @@
 		</section>
   </inputs>
   <outputs>
-    <data name="output" format="tar" label="FBA" >
-			<change_format>
-				<when input="format_type.input_format" value="sbml" format="sbml"/>
-      </change_format>
-		</data>
+    <data name="output" format="xml" label="FBA" />
   </outputs>
   <help><![CDATA[
 FBA
