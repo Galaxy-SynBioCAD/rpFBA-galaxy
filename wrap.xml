@@ -111,28 +111,28 @@ Input
 Required:
 
 
-* **-input**\ : (string) Path to the input file
-* **-input_format**\ : (string) Valid options: tar, sbml. Format of the input file
-* **-full_sbml**\ : (string) Path to the GEM SBML model
+* **-input_sbml**\ : (string) Path to the input file
+* **-gem_sbml**\ : (string) Path to the GEM SBML model
 
 Advanced options:
 
 
-* **-pathway_id**\ : (string, default=rp_pathway) ID of the heterologous pathway
-* **-compartment_id**\ : (string, default=MNXC3 (i.e. cytoplasm)) ID of the compartment ID that contains the heterologous pathway
-* **-sim_type**\ : (string, default=fraction) Valid options include: fraction, fba, pfba. The type of constraint based modelling method
-* **-source_reaction**\ : (string, default=biomass) Name of the source reaction that will be restricted in the "fraction" simulation type. This parameter is ignored for "fba" and "pfba"
-* **-target_reaction**\ : (string, default=RP1_sink) Heterologous pathway flux sink reaction. This parameters is required in all simulation type
-* **-source_coefficient**\ : (float, default=1.0) Objective coefficient for the source reaction. This parameter is ignored for "fba" and "pfba"
-* **-target_coefficient**\ : (float, default=1.0) Objective coefficient for the target reaction.
-* **-is_max**\ : (boolean, default=True) Maximise or minimise the objective function
-* **-fraction_of**\ : (float, default=0.75) Portion of the maximal flux used to set the maximal and minimal bounds for the source reaction of the "fraction" simulation type
-* **-dont_merge**\ : (boolean, default=True) Return the merged GEM+heterologous pathway SBML or only the heterologous pathway SBML files
+* **--pathway_id**\ : (string, default=rp_pathway) ID of the heterologous pathway
+* **--compartment_id**\ : (string, default=MNXC3 (i.e. cytoplasm)) ID of the compartment ID that contains the heterologous pathway
+* **--sim_type**\ : (string, default=fraction) Valid options include: fraction, fba, pfba. The type of constraint based modelling method
+* **--source_reaction**\ : (string, default=biomass) Name of the source reaction that will be restricted in the "fraction" simulation type. This parameter is ignored for "fba" and "pfba"
+* **--target_reaction**\ : (string, default=RP1_sink) Heterologous pathway flux sink reaction. This parameters is required in all simulation type
+* **--source_coefficient**\ : (float, default=1.0) Objective coefficient for the source reaction. This parameter is ignored for "fba" and "pfba"
+* **--target_coefficient**\ : (float, default=1.0) Objective coefficient for the target reaction.
+* **--is_max**\ : (boolean, default=True) Maximise or minimise the objective function
+* **--fraction_of**\ : (float, default=0.75) Portion of the maximal flux used to set the maximal and minimal bounds for the source reaction of the "fraction" simulation type
+* **--dont_merge**\ : (boolean, default=True) Return the merged GEM+heterologous pathway SBML or only the heterologous pathway SBML files
+* **--log**: (string, default=error) Set the log level, choices are 'debug', 'info', 'warning', 'error', 'critical'
 
 Output
 ------
 
-* **-output**\ : (string) Path to the output file
+* **output**\ : (string) Path to the output file
 
 Project Links
 ---------------------
@@ -148,6 +148,7 @@ Authors
 -------
 
 * **Melchior du Lac**
+* **Joan Hérisson**
 
 License
 -------
@@ -159,7 +160,6 @@ Acknowledgments
 
 
 * Thomas Duigou
-* Joan Hérisson
 ]]></help>
   <citations>
     <citation type="bibtex">
