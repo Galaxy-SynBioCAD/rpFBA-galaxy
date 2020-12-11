@@ -1,14 +1,14 @@
 <tool id="rpFBA" name="FBA">
 	<description>Perform FBA for the RetroPath2.0 heterologous pathways</description>
 	<requirements>
-    <requirement type="package">rpcompletion</requirement>
+    <requirement type="package">rpfba</requirement>
   </requirements>
   <stdio>
     <regex match="WARNING" level="warning" />
     <regex match="ERROR"   level="error" />
   </stdio>
   <command detect_errors="exit_code"><![CDATA[
-		python -m rpfba '$format_type.input' '$gem_sbml' '$output'
+		python -m rpfba '$input_sbml' '$gem_sbml' '$output'
 			#if str($adv.dont_merge) == "false":
 				--dont_merge
 			#end if
@@ -37,18 +37,7 @@
 			#end if
   ]]></command>
   <inputs>
-		<conditional name="format_type">
-      <param name="input_format" type="select" label="Input/output format">
-        <option value="tar" type="text" selected="True">TAR</option>
-        <option value="sbml" type="text" >SBML</option>
-      </param>
-      <when value="tar">
-        <param name="input" type="data" format="tar" label="Input file" />
-      </when>
-      <when value="sbml">
-        <param name="input" type="data" format="sbml" label="Input file" />
-      </when>
-    </conditional>
+		<param name="input_sbml" type="data" format="sbml" label="Input file" />
 		<param name="gem_sbml" type="data" format="sbml" label="Input GEM SBML model" />
     <conditional name="input_sim_type">
       <param name="sim_type" type="select" label="Constraint based simulation type">
