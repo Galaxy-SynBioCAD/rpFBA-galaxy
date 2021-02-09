@@ -48,20 +48,20 @@
         <option value="pfba"     type="text">Parsimonious FBA</option>
       </param>
 			<when value="fraction">
-				<param name="fraction_of"        type="float" value="0.75"     label="Fraction of the source reaction" />
-				<param name="target_reaction"    type="text"  value="RP1_sink" label="Target reaction" />
-				<param name="source_coefficient" type="float" value="1.0" l    abel="Target coefficient" />
-				<param name="source_reaction"    type="text"  value="biomass"  label="Source reaction" />
-				<param name="target_coefficient" type="float" value="1.0"      label="Source coefficient" />
+				<param name="fraction_of"        type="float" value="0.75"       label="Fraction of the source reaction" />
+				<param name="target_reaction"    type="text"  value="rxn_target" label="Target reaction" />
+				<param name="source_coefficient" type="float" value="1.0"        label="Target coefficient" />
+				<param name="source_reaction"    type="text"  value="biomass"    label="Source reaction" />
+				<param name="target_coefficient" type="float" value="1.0"        label="Source coefficient" />
 			</when>
 			<when value="pfba">
-				<param name="fraction_of"        type="float" value="0.95"     label="Fraction of optimal" />
-				<param name="target_reaction"    type="text"  value="RP1_sink" label="Target reaction" />
-				<param name="target_coefficient" type="float" value="1.0"      label="Target coefficient" />
+				<param name="fraction_of"        type="float" value="0.95"       label="Fraction of optimal" />
+				<param name="target_reaction"    type="text"  value="rxn_target" label="Target reaction" />
+				<param name="target_coefficient" type="float" value="1.0"        label="Target coefficient" />
 			</when>
 			<when value="fba">
-				<param name="target_reaction"    type="text"  value="RP1_sink" label="Target reaction" />
-				<param name="target_coefficient" type="float" value="1.0"      label="Target coefficient" />
+				<param name="target_reaction"    type="text"  value="rxn_target" label="Target reaction" />
+				<param name="target_coefficient" type="float" value="1.0"        label="Target coefficient" />
 			</when>
     </conditional>
 		<section name="adv" title="Advanced Options" expanded="false">
