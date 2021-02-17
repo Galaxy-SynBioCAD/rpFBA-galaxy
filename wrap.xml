@@ -80,7 +80,7 @@
 		</section>
   </inputs>
   <outputs>
-    <data name="output" format="xml" label="${tool.name} ${input_sbml.name}" />
+    <data name="output" format="xml" label="${tool.name} - ${input_sim_type.sim_type} - ${input_sbml.name}" />
   </outputs>
   <help><![CDATA[
 FBA
