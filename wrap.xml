@@ -39,8 +39,8 @@
 			#end if
   ]]></command>
   <inputs>
-		<param name="input_sbml" type="data" format="sbml" label="Input file" />
-		<param name="gem_sbml"   type="data" format="sbml" label="Input GEM SBML model" />
+		<param name="input_sbml" type="data" format="xml" label="Input file" />
+		<param name="gem_sbml"   type="data" format="xml" label="Input GEM SBML model" />
     <conditional name="input_sim_type">
       <param name="sim_type"     type="select" label="Constraint based simulation type">
         <option value="fraction" type="text" selected="true">Fraction of Reaction</option>
