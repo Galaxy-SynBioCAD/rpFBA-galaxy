@@ -8,7 +8,7 @@
     <regex match="ERROR"   level="error" />
   </stdio>
   <command detect_errors="exit_code"><![CDATA[
-		python -m rptools.rpfba '$input_sbml' '$gem_sbml' '$output'
+		python -m rptools.rpfba '$pathway' '$model' '$output'
 			#if str($adv.dont_merge) == "false":
 				--dont_merge
 			#end if
@@ -39,8 +39,8 @@
 			#end if
   ]]></command>
   <inputs>
-		<param name="input_sbml" type="data" format="xml" label="Pathway (rpSBML)" />
-		<param name="gem_sbml"   type="data" format="xml" label="Model (rpSBML)" />
+		<param name="pathway" type="data" format="xml" label="Pathway (rpSBML)" />
+		<param name="model"   type="data" format="xml" label="Model (SBML)" />
     <conditional name="input_sim_type">
       <param name="sim_type"     type="select" label="Constraint based simulation type">
         <option value="fraction" type="text" selected="true">Fraction of Reaction</option>
